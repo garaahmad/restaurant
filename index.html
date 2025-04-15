@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برجر ماستر | Burger Master</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3bc858948a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <select class="lang-dropdown">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <span class="nav-toggle">&#9776;</span> <!-- Hamburger menu icon -->
+        <ul>
+            <li><a href="#home" class="nav-link" data-translate="nav_home">الرئيسية</a></li>
+            <li><a href="#about" class="nav-link" data-translate="nav_about">من نحن</a></li>
+            <li><a href="#order" class="nav-link" data-translate="nav_order">اطلب الآن</a></li>
+            <li><a href="#contact" class="nav-link" data-translate="nav_contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home" class="active">
+        <h1 data-translate="title">مرحبا بكم في برجر ماستر</h1>
+        <div id="section1">
+            <img src="https://wallpapers.com/images/high/burger-fries-and-vegetables-2560x1440-food-vnf4rfc37ni30xzk.webp"
+                alt="">
+            <p data-translate="description">
+                هل تبحث عن تجربة طعام فريدة من نوعها؟ لا داعي للبحث أكثر! مطعم برجر ماستر هو وجهتك المثالية لعشاق
+
+                البرجر. نحن نقدم مجموعة متنوعة من البرجر اللذيذة التي تناسب جميع الأذواق، بدءًا من الكلاسيكية
+                إلى المبتكرة. كل قضمة تأخذك في رحلة من النكهات التي لا تُنسى! في مطعم برجر ماستر، نُقدّم لك البرجر كما
+                لم تتذوقه من قبل
+                مكوّنات طازجة، وصفات مبتكرة، وأجواء مميزة تجمع بين الأصالة والحداثة. انضم إلينا لتجربة استثنائية في عالم
+                البرجر!
+
+            </p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 data-translate="about">من نحن</h2>
+        <div id="about-content">
+            <img src="https://img.freepik.com/free-photo/pre-prepared-food-showcasing-ready-eat-delicious-meals-go_23-2151246066.jpg?t=st=1744715809~exp=1744719409~hmac=45de0a9409fd0e91a907941141d710f66105472026ac1a801a3c9b0c318c05f8&w=740"
+                alt="About Us Image">
+
+            <p data-translate='about_paragraph1'>
+                في مطعم برجر ماستر، نحن أكثر من مجرد مطعم برجر. نحن فريق شغوف بتقديم تجربة طعام استثنائية تجمع بين
+                الجودة والابتكار.
+                تأسس مطعمنا على فكرة بسيطة: تقديم أفضل أنواع البرجر باستخدام المكونات الطازجة والوصفات المبتكرة.
+                نحن نؤمن بأن الطعام ليس مجرد وجبة، بل هو تجربة تجمع بين النكهات والأجواء الرائعة.
+            </p>
+            <p data-translate="about_paragraph2">
+                رؤيتنا هي أن نكون الوجهة الأولى لعشاق البرجر في المنطقة. نسعى دائمًا لتقديم الأفضل من خلال تحسين وصفاتنا
+                وتقديم خدمة عملاء مميزة. انضم إلينا لتكون جزءًا من عائلتنا واستمتع بتجربة طعام لا تُنسى.
+            </p>
+
+        </div>
+    </section>
+
+    <section id="order">
+        <h2 data-translate="order">اطلب الآن</h2>
+        <div id="order-content">
+            <p data-translate="order_paragraph">
+                استمتع بتجربة طلب سهلة وسريعة مع مطعم برجر ماستر! اختر وجبتك المفضلة من قائمتنا المتنوعة،
+                وأضف لمساتك الخاصة من الإضافات الشهية. نحن نضمن لك تجربة طلب مريحة تلبي جميع احتياجاتك.
+                <br>
+                سواء كنت ترغب في تناول الطعام في المنزل أو في المكتب، نحن هنا لخدمتك.
+                اطلب الآن واستمتع بوجبة برجر لذيذة تصل إلى باب منزلك في وقت قياسي!
+            </p>
+            <form action="" class="order-form">
+                <div class="form-group">
+                    <label for="name" data-translate="name">الاسم</label>
+                    <input type="text" id="name" name="name" required>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="phone" data-translate="phone">رقم الهاتف</label>
+                    <input id="phone" name="phone" required>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="address" data-translate="address">العنوان</label>
+                    <input type="text" id="address" name="address" required>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="orderin" data-translate="ordering">الطلب</label>
+                    <textarea id="orderin" name="orderin"required></textarea>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="notes" data-translate="notes">ملاحظات إضافية</label>
+                    <textarea id="notes" name="notes" ></textarea>
+                </div><br>
+
+                <button type="submit" class="submit-button" data-translate="submitbtn">إرسال الطلب</button>
+            </form>
+
+    </section>
+
+    <section id="contact">
+        <h2 data-translate="contact">اتصل بنا</h2>
+        <div id="contact-content">
+            <p data-translate="contact_paragraph1">
+                نحن هنا لخدمتك! إذا كان لديك أي استفسارات أو اقتراحات، لا تتردد في التواصل معنا. 
+                فريقنا متواجد دائمًا لضمان حصولك على أفضل تجربة ممكنة.
+            </p>
+            <p data-translate="contact_paragraph2">
+                يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني، أو زيارة أحد فروعنا. 
+                نحن نتطلع إلى سماعك!
+            </p>
+            <div class="contact-info">
+                <p><strong data-translate="phone">الهاتف:</strong> +966-555-123456</p>
+                <p><strong data-translate="email">البريد الإلكتروني:</strong> info@burgermaster.com</p>
+                <p><strong data-translate="address">العنوان:</strong> <strong data-translate="addressdet">شارع البرجر، الرياض، المملكة العربية السعودية</strong></p>
+            </div>
+            <form action="" class="contact-form">
+                <div class="form-group">
+                    <label for="name" data-translate="name">الاسم</label>
+                    <input type="text" id="name" name="name"  required>
+                </div><br>
+                <div class="form-group">
+                    <label for="email" data-translate="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email"  required>
+                </div><br>
+                <div class="form-group">
+                    <label for="message" data-translate="message">رسالتك</label>
+                    <textarea id="message" name="message"  required></textarea>
+                </div><br>
+                <button type="submit" class="submit-button" data-translate="send">إرسال</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            
+            <div class="footer-section">
+                <h3 data-translate="contact">تواصل</h3>
+                <p data-translate="addressdet">شارع البرجر، الرياض، المملكة العربية السعودية</p>
+                <p data-translate="addressdet2">فلسطين  غزة</p>
+                <p>+1(123)-456-7890</p>
+                <p>+1(123)-456-7890</p>
+                <p id="emailfot">
+                    <a href="mailto:info@mydomain.com" style="color: white; text-decoration: none;">info@mydomain.com</a>
+                </p></p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="ourweb">مواقع التواصل الاجتماعي الخاصة بنا</h3>
+                <i class="fa-brands fa-facebook"><a href=""></a></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="Quick">روابط سريعة</h3>
+                <ul>
+                    <li><a href="#home" data-translate="nav_home">الرئيسية</a></li>
+                    <li><a href="#about" data-translate="nav_about">من نحن</a></li>
+                    <li><a href="#order" data-translate="nav_order">اطلب الآن</a></li>
+                    <li><a href="#contact" data-translate="nav_contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
