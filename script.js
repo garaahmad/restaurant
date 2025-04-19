@@ -2,6 +2,8 @@
 const langDropdown = document.querySelector('.lang-dropdown');
 const translatableElements = document.querySelectorAll('[data-translate]');
 const navLinks = document.querySelectorAll('.nav-link'); // إضافة اختيار عناصر التنقل
+const orderForm = document.getElementById('order-form');
+const scriptURL = 'https://script.google.com/macros/s/AKfycby3FP_fRFxmSbqV7y93DRrseyKL74VdoNk-Qx71Wg4yI8TBXa8fX7PsBZ43azDpPSw/exec';
 
 const translations = {
     en: {
@@ -92,11 +94,7 @@ langDropdown.addEventListener('change', (e) => {
         element.textContent = translations[lang][key];
     });
     
-    // ترجمة عناصر التنقل
-    navLinks.forEach((link, index) => {
-        const keys = ['nav_home', 'nav_about', 'nav_contact', 'nav_order'];
-        link.textContent = translations[lang][keys[index]];
-    });
+
     
     // أنيميشن التغيير
     document.body.style.animation = 'fadeIn 0.2s';
@@ -169,4 +167,39 @@ const navMenu = document.querySelector('nav ul');
 
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
+});
+
+// Google Sheets Integration with Proper FormData Submission
+orderForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(orderForm);
+
+    // Show loading spinner
+    const submitButton = orderForm.querySelector('.submit-button');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting...';
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: formData // Send FormData directly
+    })
+        .then(response => {
+            if (response.ok) {
+                // Show success message
+                alert('Your order has been submitted successfully!');
+                orderForm.reset(); // Clear the form after submission
+            } else {
+                throw new Error('Failed to submit the form.');
+            }
+        })
+        .catch(error => {
+            // Show error message
+            alert('There was an error submitting your order. Please try again.');
+            console.error('Error!', error.message);
+        })
+        .finally(() => {
+            // Reset button state
+            submitButton.disabled = false;
+            submitButton.textContent = 'Submit Order';
+        });
 });
