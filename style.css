@@ -33,11 +33,22 @@ body.dark-mode section.active {
 
 /* Language Dropdown */
 .lang-switcher {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1100; /* Ensure it is above other elements */
-}
+
+        position: fixed;
+        bottom: 5px;
+        left:  5px;
+        z-index: 1000;
+        color: var(--light-color);
+        border: none;
+        border-radius: 15px; /* Adjusted for smoother corners */
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background 0.3s;
+    }
+    
+
+
 
 .lang-dropdown {
     background: rgba(255, 255, 255, 0.1);
@@ -135,82 +146,9 @@ nav a:hover::after {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        max-height: 0;
-        overflow: hidden;
-        background: rgba(0, 0, 0, 0.9);
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 10px 0;
-        transition: max-height 0.3s ease;
-    }
 
-    nav ul.active {
-        max-height: 300px; /* Adjust based on the number of links */
-    }
 
-    header {
-        height: 70vh;
-    }
-
-    section {
-        padding: 50px 20px;
-    }
-
-    input, textarea {
-        width: 80%;
-    }
-
-    .contact-form input, .contact-form textarea {
-        width: 100%;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-section {
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul {
-        font-size: 0.9em;
-    }
-
-    header {
-        height: 50vh;
-    }
-
-    h1, h2 {
-        font-size: 1.5em;
-    }
-
-    input, textarea {
-        width: 100%;
-    }
-
-    .lang-dropdown {
-        font-size: 0.9em;
-    }
-
-    .theme-toggle {
-        font-size: 0.8em;
-        padding: 8px 15px;
-    }
-}
 
 /* Sections */
 section {
