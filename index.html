@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>برجر ماستر | Burger Master</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobileandtap.css">
     <script src="https://kit.fontawesome.com/3bc858948a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -20,7 +21,6 @@
 
     <!-- Navigation -->
     <nav>
-        <span class="nav-toggle">&#9776;</span> <!-- Hamburger menu icon -->
         <ul>
             <li><a href="#home" class="nav-link" data-translate="nav_home">الرئيسية</a></li>
             <li><a href="#about" class="nav-link" data-translate="nav_about">من نحن</a></li>
@@ -78,7 +78,7 @@
                 سواء كنت ترغب في تناول الطعام في المنزل أو في المكتب، نحن هنا لخدمتك.
                 اطلب الآن واستمتع بوجبة برجر لذيذة تصل إلى باب منزلك في وقت قياسي!
             </p>
-            <form action="" class="order-form">
+            <form id="order-form" method="POST" action="https://script.google.com/macros/s/AKfycbwFWhtRwEhWzWvqLpq23-KIzAgsocZawzF3bL70paiNgsu6mBt888v4fj5uOQlCqMg/exec">
                 <div class="form-group">
                     <label for="name" data-translate="name">الاسم</label>
                     <input type="text" id="name" name="name" required>
@@ -96,17 +96,17 @@
 
                 <div class="form-group">
                     <label for="orderin" data-translate="ordering">الطلب</label>
-                    <textarea id="orderin" name="orderin"required></textarea>
+                    <textarea id="orderin" name="orderin" required></textarea>
                 </div><br>
 
                 <div class="form-group">
                     <label for="notes" data-translate="notes">ملاحظات إضافية</label>
-                    <textarea id="notes" name="notes" ></textarea>
+                    <textarea id="notes" name="notes"></textarea>
                 </div><br>
 
                 <button type="submit" class="submit-button" data-translate="submitbtn">إرسال الطلب</button>
             </form>
-
+        </div>
     </section>
 
     <section id="contact">
